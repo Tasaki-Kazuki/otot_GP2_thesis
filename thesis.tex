@@ -61,7 +61,7 @@ pdftitle={RG},%
 \newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
 
 % A4  size: 297mm*210mm %1pt = 0.35mm
-\setlength{\topmargin}{-3.4mm} % 10pt 25.4mm - 3.4mm = 22mm
+\setlength{\topmargin}{-3.8mm} % 10pt 25.4mm - 3.4mm = 22mm
 \setlength{\oddsidemargin}{-0.4mm} % 25.4mm - 0.4mm = 25mm
 \setlength{\evensidemargin}{-0.4mm} % 25.4mm - 0.4mm = 25mm
 \setlength{\textheight}{231mm} % 660pt % original is 225.75mm 645pt
@@ -100,7 +100,7 @@ pdftitle={RG},%
 \input{src/titlepage}
 \thispagestyle{empty}
 
-
+\pagenumbering{arabic}
 \input{src/abstract_japanese}
 \thispagestyle{plain}
 \clearpage
@@ -116,14 +116,15 @@ pdftitle={RG},%
 \listoftables\thispagestyle{plain} %表目次
 \clearpage
 
-\pagenumbering{arabic}
+
 \input{src/1_introduction}
 \input{src/2_background}
 \input{src/3_issue}
 \input{src/4_proposed}
 \input{src/5_implementation}
 \input{src/6_evaluation}
-\input{src/7_conclusion}
+\input{src/7_related_research}
+\input{src/8_conclusion}
 %\input{src/appendix}
 \input{src/acknowledgement}
 
