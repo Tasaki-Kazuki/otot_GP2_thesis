@@ -99,9 +99,8 @@ JBBFにおけるボディビルの審査基準はJBBF競技マニュアルのメ
 \section{骨格推定}
 骨格推定とは深層学習などを用いて人物のポーズを可視化してくれる手法であり、モーションキャプチャーなどの機器を使用することなく,
 画像、動画データ、又はカメラからの入力を用いて人間のポーズを可視化することができる。
-カーネギーメロン大学（CMU）の Zhe Caoら が「Realtime Multi-Person pose estimation」\cite{openpose}の論文で発表した、OpenPoseが一つの例である。\ref{fig:openpose}
+カーネギーメロン大学（CMU）の Zhe Caoら が「Realtime Multi-Person pose estimation」\cite{openpose}の論文で発表した、OpenPoseが一つの例である。OpenPoseでは図\ref{fig:openpose}のように、人物の骨格を推定しリアルタイムに可視化することができる。
 骨格推定はさまざまなスポーツへ利用されている。上智大学大学院の金子ら \cite{soccer_openpose}はOpenPoseを用いてサッカーのシュートフォームを取得し、体の傾き、軸足、腰の回転、フォロースルーを特長量として用い、習熟度ごとに分類を行った。
-TODO:もう少し骨格推定の応用例を増やす。
 \begin{figure}[htbp]
     \begin{center}
         \includegraphics[width=7cm]{figures/openpose.png}
