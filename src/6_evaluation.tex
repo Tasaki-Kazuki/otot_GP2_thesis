@@ -21,9 +21,8 @@
 
 \section{測定方法}
 練習前、練習後、練習から24時間後に写真を撮影し、それをMediapipe Poseを用い、ポーズを解析し角度を測定した。
-今回はMediapipe PoseでもBlazePose GHUM Heavyモデルを用いた。BlazePose GHUM Heavyは表\ref{tab:pose-estimation-quality}に示す通り同じBlazePose GHUのモデルや、AlphaPose ResNet50、Apple Visionと比較しても様々なアクティビティにおいて精度が高いことが報告されている。
-この評価で用いられているPCK@0.2とは、人体の各部位の予測点と実際の点の距離が、人体の幅の20\%以内にあるかどうかを判定する指標である。\cite{PCK}
-また、利用者の属する地域別の精度は \ref{fig:Model-Accuracy-by-Race}に示す。今回の被験者の所属する日本は、Eastern Asiaに属するが、Eastern Asiaでの精度は今回利用するHeavyモデルではPDJという手法で92.6\%となっている。PDJはPCK@0.2と同義である。
+今回はMediapipe PoseでもBlazePose GHUM Heavyモデルを用いた。BlazePose GHUM Heavyは表 \ref{tab:pose-estimation-quality} に示す通り同じBlazePose GHUのモデルや、AlphaPose ResNet50、Apple Visionと比較しても様々なアクティビティにおいて精度が高いことが報告されている。
+この評価で用いられているPCK@0.2とは、人体の各部位の予測点と実際の点の距離が、人体の幅の20\%以内にあるかどうかを判定する指標である。\cite{PCK} また、利用者の属する地域別の精度は \ref{fig:Model-Accuracy-by-Race} に示す。今回の被験者の所属する日本は、Eastern Asiaに属するが、Eastern Asiaでの精度は今回利用するHeavyモデルではPDJという手法で92.6\%となっている。PDJはPCK@0.2と同義である。
 
 \begin{table}[ht]
   \centering
@@ -41,15 +40,15 @@
   \end{tabular}
   \caption{様々なアクティビティにおける様々なモデルのPCK@0.2の比較 \cite{pose-estimation-quality}}
   \label{tab:pose-estimation-quality}
-  \end{table}
+\end{table}
   
-  \begin{figure}[H]
-    \begin{center}
-    \includegraphics[width=12cm]{figures/Model_Accuracy_by_Race.png}
-    \caption{地域別の精度 \cite{Model-Accuracy-by-Race}}
-    \label{fig:Model-Accuracy-by-Race}
-    \end{center}
-    \end{figure}
+\begin{figure}[H]
+  \begin{center}
+  \includegraphics[width=9cm]{figures/Model_Accuracy_by_Race.png}
+  \caption{地域別の精度 \cite{Model-Accuracy-by-Race}}
+  \label{fig:Model-Accuracy-by-Race}
+  \end{center}
+\end{figure}
 
 \section{結果}
 本研究では練習で改善されたかどうかを評価したいため、練習前、練習後、練習から24時間後のポーズの角度と理想とするポーズの角度の差\(\bar{\theta}_{\text{angle\_dif}}\)を利用して評価する。
@@ -59,12 +58,16 @@
   \bar{\theta}_{\text{angle\_dif}} = \frac{1}{4} \sum_{i \in \{\text{RE, LE, RS, LS}\}} |\theta_{i, \text{Actual}} - \theta_{i, \text{Ideal}}|
 \]
 
-% \subsection{システム利用群の比較}
-% TODOここに比較を書く。グラフは木曜日以降
-% グラフは全被験者の理想との差の平均の3系列棒グラフ、pre→after→24hの順の折れ線グラフ
-% \subsection{鏡利用群の比較}
-% TODOここに比較を書く。グラフは木曜日以降
-% グラフはシステム利用群の比較と同じ
-% \subsection{システム利用群と鏡利用群の比較}
-% TODOここに比較を書く。グラフは木曜日以降dous
+\subsection{練習前後、24時間後の比較}
+ここではシステムを利用して練習した群と鏡を利用して練習した群それぞれの練習前後、24時間後のポーズの理想の角度との差を比較する。
+\subsubsection{システム利用群の比較}
+TODOここに比較を書く。グラフは木曜日以降
+グラフは全被験者の理想との差の平均の3系列棒グラフ、pre→after→24hの順の折れ線グラフを書きたい
+\subsubsection{鏡利用群の比較}
+TODOここに比較を書く。グラフは木曜日以降
+グラフはシステム利用群の比較と同じ
+
+\section{鏡利用群とシステム利用群の比較}
+TODOここでは同じポーズにおいてシステム利用群と鏡利用群の比較を行う。グラフは木曜日以降
+
 
