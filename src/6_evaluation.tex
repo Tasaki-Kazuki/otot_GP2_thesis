@@ -23,10 +23,11 @@
 \section{測定方法}
   練習前、練習後、24時間後に写真を撮影し、それをMediapipe Poseを用い、ポーズを解析し角度を測定した。
   今回はMediapipe PoseでもBlazePose GHUM Heavyモデルを用いた。BlazePose GHUM Heavyモデルは表 \ref{tab:pose-estimation-quality} に示す通り同じBlazePose GHUMのモデルや、AlphaPose ResNet50、Apple Visionと比較しても様々なアクティビティにおいて精度が高いことが報告されている。
-  この評価で用いられているPCK@0.2とは、人体の各部位の予測点と実際の点の距離が、人体の幅の20\%以内にあるかどうかを判定する指標である。\cite{PCK} また、利用者の属する地域別の精度は \ref{fig:Model-Accuracy-by-Race} に示す。今回の被験者の所属する日本は、Eastern Asiaに属するが、Eastern Asiaでの精度は今回利用するHeavyモデルではPDJという手法で92.6\%となっている。PDJはPCK@0.2と同義である。
+  この評価で用いられているPCK@0.2とは、人体の各部位の予測点と実際の点の距離が、人体の幅の20\%以内にあるかどうかを判定する指標である。\cite{PCK} また、利用者の属する地域別の精度は 図\ref{fig:Model-Accuracy-by-Race} に示す。今回の被験者の所属する日本は、Eastern Asiaに属するが、Eastern Asiaでの精度は今回利用するHeavyモデルではPDJという手法で92.6\%となっている。PDJはPCK@0.2と同義である。
 
   \begin{table}[ht]
     \centering
+    \caption{様々なアクティビティにおける様々なモデルのPCK@0.2の比較 \cite{pose-estimation-quality}}
     \begin{tabular}{|l|c|c|c|}
     \hline
     \textbf{Method} & \textbf{Yoga} & \textbf{Dance} & \textbf{HIIT} \\
@@ -39,13 +40,12 @@
     \href{https://developer.apple.com/documentation/vision/detecting_human_body_poses_in_images}{Apple Vision} & \textbf{82.7} & \textbf{91.4} & \textbf{88.6} \\
     \hline
     \end{tabular}
-    \caption{様々なアクティビティにおける様々なモデルのPCK@0.2の比較 \cite{pose-estimation-quality}}
     \label{tab:pose-estimation-quality}
   \end{table}
     
   \begin{figure}[H]
     \begin{center}
-    \includegraphics[width=9cm]{figures/Model_Accuracy_by_Race.png}
+    \includegraphics[width=12cm]{figures/Model_Accuracy_by_Race.png}
     \caption{様々な骨格推定モデルの地域別精度 \cite{Model-Accuracy-by-Race}}
     \label{fig:Model-Accuracy-by-Race}
     \end{center}
